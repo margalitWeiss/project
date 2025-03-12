@@ -1,0 +1,32 @@
+/* קונטיינר לעיצוב הפסקאות */
+.city-details {
+    position: relative;
+    top: 15%; /* מיקום של הקונטיינר */
+    left: 107px;
+    width: 100%; /* נוודא שהקונטיינר תופס את כל הרוחב */
+    font-family: 'Heebo', sans-serif;
+    font-weight: 300;
+    color: #707070;
+  }
+  
+  /* עיצוב הפסקאות */
+  .firstP,
+  .secondP {
+    display: inline-block; /* יעמדו ליד אחד את השני */
+    margin-right: 20px; /* רווח קטן בין הפסקאות */
+    font-size: 14px;
+    line-height: 2px;
+    letter-spacing: 0px;
+    opacity: 1;
+  }
+  
+  /* עיצוב הפסקה השלישית שמתחת */
+  .thirdP {
+    clear: both; /* מוודא שהפסקה הזו תעמוד מתחת לשתי הפסקאות הקודמות */
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 0px;
+    color: #707070;
+    opacity: 1;
+    margin-top: 0px; /* רווח קטן למטה */
+  }

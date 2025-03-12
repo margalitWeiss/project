@@ -1,0 +1,44 @@
+/* הגדרת סגנונות גוף הדף */
+body {
+    background: #F1F1F1 0% 0% no-repeat padding-box;
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* הגדרת הקונטיינר הכללי שמכיל את הקומפוננטות */
+  .container {
+    display: flex;
+    justify-content: space-between; /* מוודא שהקומפוננטות מפולגות בצורה שווה */
+    gap: 20px; /* מרווח בין הקומפוננטות */
+    padding: 20px;
+    height: 100vh; /* גובה כל החלון */
+    box-sizing: border-box;
+  }
+  
+  /* עיצוב קומפוננטת CitySearch */
+  .container-search {
+    width: 50%; /* מקצה חצי מהעמוד לקומפוננטה CitySearch */
+    padding: 20px;
+    /* box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); */
+  }
+  
+  /* עיצוב קומפוננטת WeatherDisplay */
+  .container-display {
+    width: 50%; /* מקצה חצי מהעמוד לקומפוננטה WeatherDisplay */
+    /* border-radius: 8px; */
+    padding: 20px;
+    /* box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); */
+    /* overflow-y: auto; אפשרות לגלול אם התוכן ארוך מדי */
+  }
+  @media (max-width:1190px) {
+    .container {
+        flex-direction: column;
+      }
+      .container-search {
+       margin-bottom: 5%;
+      }
+  }
+ 
+  
+  
+  

@@ -1,0 +1,125 @@
+
+.container-display {
+  margin-right: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 660px;
+  width: 50%;
+  background-color: #DDE4E6;
+  border-radius: 4px;
+  opacity: 1;
+}
+
+.card {
+  text-align: center;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+  color: #E8F1F2;
+  width: 70%;
+  height: 514px;
+  background-color: #2f6b72;
+  border-radius: 20px;
+  padding: 20px;
+  font: normal normal normal 26px/26px Heebo;
+}
+
+.city {
+  margin-bottom: 0%;
+  letter-spacing: 0px;
+  opacity: 1;
+  font-weight: 300; 
+  white-space: nowrap;
+}
+
+
+.thin {
+  font-size: 14px;
+  color: #A8C6CB;
+  font-weight: 300;
+  margin-top: 1px;
+  margin-bottom: 10px;
+  font: normal normal 300 22px/22px Heebo;
+  opacity: 1;
+  height: 32px; 
+}
+.celsius {
+  font-weight: bold;
+  margin: 12% 0;
+  letter-spacing: -10px;
+  color: #FFFFFF;
+  font-size: 8rem;
+}
+.container-climate {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* זה מבטיח שכל h4 יעמוד בשורה */
+  gap: 10px;
+  margin-top: 15px;
+  grid-auto-rows: auto; /* כל שורה תתאים לגובה שלה */
+}
+
+.container-climate h4 {
+  font-size: 1.3rem;
+  font-weight:unset ;
+  margin: 0;
+  grid-column: span 1;
+  letter-spacing: 0px;
+  margin-top: 20%;
+
+}
+
+.container-climate p {
+  font-size: 1.4rem;
+  margin: 0;
+  grid-column: span 1; /* כל p יעמוד תחת ה-h4 */
+}
+
+.hour-climate h5 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 35%;
+  grid-column: span 1;
+  color: #A8C6CB;
+  margin-bottom: 0;
+
+}
+
+.hour-climate {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* כל h5 יעמוד בשורה אחת */
+  gap: 10px;
+  margin-top: 15px;
+  grid-auto-rows: auto; /* כל שורה תתאים לגובה שלה */
+}
+
+.hour-climate p {
+  font-size: 17px;
+  margin: 0;
+  grid-column: span 1; /* כל p יעמוד מתחת ל-h5 */
+}
+@media (max-width:1190px) {
+  .container-display {
+    
+    width: 100%;
+ 
+  }
+  .celsius {
+   
+    margin: 5% 0;
+   
+  }
+ }
+ @media (max-width:950px) {
+  
+  .celsius {
+   
+    margin: 9% 0;
+   
+  }
+ }
+
+
+
+
+
+  
+

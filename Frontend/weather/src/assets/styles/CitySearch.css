@@ -1,0 +1,86 @@
+
+/* קונטיינר של הטופס */
+.form {
+  position: relative; /* כדי לאפשר למיקומים להיות יחסיים */
+  width: 431px;
+  height: 94px;
+  opacity: 1;
+  margin-top: 372px;
+  margin-left: 103px;
+}
+
+/* Label (תווית) */
+.label {
+  position: absolute;
+  top: 0;
+  left: 12px;
+  width: 90px;
+  height: 24px;
+  text-align: left;
+  font: normal normal 300 16px/22px Heebo;
+  letter-spacing: 0px;
+  color: #707070;
+  opacity: 1;
+}
+
+/* Input text */
+.input {
+  position: absolute;
+  top: 32px; /* המרחק התחלתי מה-topleft של הקונטיינר */
+  left: 0;
+  width: 431px;
+  height: 63px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  border-radius: 10px;
+  opacity: 1;
+  padding-left: 0px; /* התאמת מרווח פנימי */
+  font: normal normal normal 22px/32px Heebo;
+  color: #363636;
+  border: none;
+  outline: none;
+}
+/* Button (כפתור) */
+.check {
+  position: absolute;
+  top: 50%; /* מתאים לעיצוב */
+  left: 76%; /* מיקום הכפתור */
+  width: 95px;
+  height: 36px;
+  background: #046B3B 0% 0% no-repeat padding-box;
+  border-radius: 10px;
+  opacity: 1;
+  color: #FFFFFF;
+  border: none;
+  cursor: pointer;
+  font: normal normal 300 18px/27px Heebo;
+}
+
+.check:hover {
+  background: #035f2f; /* שינוי צבע בעת ריחוף */
+}
+
+/* טקסט בתוך האינפוט */
+.input::placeholder {
+  color: #707070;
+}
+
+.title {
+  position: absolute; /* מיקום על פי קואורדינטות */
+  top: 190px;
+  left: 9%;
+  width: 271px;
+  height: 132px;
+
+  /* עיצוב טקסט */
+  text-align: left;
+  font: normal normal 50 30px/50px Heebo; /* פונטים */
+  letter-spacing: 0px;
+  color: #707070;
+  opacity: 1;
+}
+@media (max-width:600px) {
+  .form {
+   
+    margin-left: 50px;
+  }
+ }
