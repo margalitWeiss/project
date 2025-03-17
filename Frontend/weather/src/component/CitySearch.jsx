@@ -1,20 +1,24 @@
-
 import React, { useState, useContext } from 'react';
-import { CityContext } from '../context/CityContext'; // הקונטקסט של העיר
-import { CityDataContext } from '../context/CityDataContext'; // הקונטקסט של נתוני העיר
+import { CityContext } from '../context/CityContext';
+import { CityDataContext } from '../context/CityDataContext'; 
 import '../assets/styles/CitySearch.css';
-import CityDetalis from './CityDetails'; // הוספת CityDetalis
+import CityDetalis from './CityDetails'; 
 
 const CitySearch = () => {
-  const [cityInput, setCityInput] = useState('');
-  const { changeCity } = useContext(CityContext); // גישה ל-changeCity מה-Context
+  const [cityInput, setCityInput] = useState(''); // State to store user input
+  const { changeCity } = useContext(CityContext); // Context to update the selected city
 
   const handleChange = (e) => {
-    setCityInput(e.target.value);
+    setCityInput(e.target.value); // Update the input state as the user types
   };
 
   const handleSearch = () => {
-    changeCity(cityInput); // שינוי העיר לפי הקלט
+    changeCity(cityInput); // Call function to update the city in context
+  };
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter') {
+      handleSearch(); // If Enter is pressed, call handleSearch
+    }
   };
 
   return (
@@ -28,12 +32,12 @@ const CitySearch = () => {
           type="text"
           name="city"
           value={cityInput}
-          onChange={handleChange}
+          onChange={handleChange} // Calls handleChange on user input
+          onKeyDown={handleKeyDown} // Adds the event listener for Enter key press
         />
-        <input className="check" type="button" value="Check" onClick={handleSearch} />
+        <input className="check" type="button" value="Check" onClick={handleSearch} /> 
       </div>
 
-      {/* כאן אנחנו מציגים את CityDetalis אחרי ביצוע החיפוש */}
       <CityDetalis />
     </div>
   );

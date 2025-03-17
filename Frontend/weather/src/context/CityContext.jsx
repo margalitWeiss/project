@@ -1,10 +1,10 @@
-// CityContext.js
+
 import React, { createContext, useState } from 'react';
 
-// יצירת ה-Context
+
 const CityContext = createContext();
 
-// יצירת ה-Provider
+
 const CityProvider = ({ children }) => {
   const [city, setCity] = useState(null);
 
