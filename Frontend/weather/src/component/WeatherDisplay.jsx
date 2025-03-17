@@ -14,7 +14,7 @@ const WeatherDisplay = () => {
     let [celsiusByHour, setCelsiusByHour] = useState([]);
 
     useEffect(() => {
-        if (city && !cityData) { // Fetch weather data only if city is selected and data is not available
+        if (city) { // Fetch weather data only if city is selected and data is not available
             getWeatherDetails(city)
                 .then((res) => {
                     setCityDataHandler({
